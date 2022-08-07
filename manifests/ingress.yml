@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "aksdev33442-41d6"
+    labels:
+        app: "aksdev33442-41d6"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: starbound-aksdev33442-41d6.16640dc19d1843fcabca.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "aksdev33442-41d6"
+                servicePort: 21025
